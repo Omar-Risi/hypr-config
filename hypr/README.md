@@ -3,9 +3,11 @@ Since you want to use this config file note that some of the stuff here are hard
 therefore, confirm these things before you press the `hyprctl reload`. 
 
 #### NOTE: YOU MUST INSTALL THE STUFF FROM THE README FIRST
+Note that some programs you may not use check `lua/programs.lua`
+
 Incase you missed them here they are :) 
 
-using yay: 
+##### yay: 
 `yay -S --needed \
   wezterm brave-bin dolphin hyprlauncher waybar \
   swww mako gnome-keyring udiskie polkit-kde-agent \
@@ -22,10 +24,14 @@ NOTE: you can find your monitors description using this cmd
 
 
 files to check: 
-`windowrules_local.lua`
-`workspaces_local.lua`
-`monitors_local.lua`
+`lua/windowrules_local.lua`
+`lua/workspaces_local.lua`
+`lua/monitors_local.lua`
+
+#### Customization
+All needed customization to match local device files are suffixed with `_local.lua` 
+You can change it from there.
 
 
 #### AUTO START
-if you don't want your battery gone I suggest your comment out the `autostart_local.lua` in your `hyprland.lua`.
+if you don't want your battery gone I suggest your comment out the `lua/autostart_local.lua` in your `hyprland.lua`.
