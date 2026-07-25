@@ -4,8 +4,8 @@
 -- values as monitors_local.lua -- fill them in once, use in both.
 -- https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 
-local PRIMARY = "desc:Microstep MSI MAG251RX 0x0000011A"
-local SECONDARY = "desc:HP Inc. HP E27q G4 CNK1501QGK"
+local PRIMARY = "desc:<monitor desc here>"
+local SECONDARY = "desc:<monitor desc here>"
 
 hl.workspace_rule({ workspace = "1", monitor = PRIMARY, default = true })
 hl.workspace_rule({ workspace = "2", monitor = PRIMARY })

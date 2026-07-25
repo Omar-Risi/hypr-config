@@ -10,14 +10,14 @@
 -- your real "description" values (e.g. "Dell Inc. DELL S2721DGF ...").
 
 hl.monitor({
-	output = "desc:Microstep MSI MAG251RX 0x0000011A",
+	output = "desc:<monitor desc here>",
 	mode = "1920x1080@240",
 	position = "1440x900",
 	scale = 1.0,
 })
 
 hl.monitor({
-	output = "desc:HP Inc. HP E27q G4 CNK1501QGK",
+	output = "desc:<monitor desc here>",
 	mode = "2560x1440@60",
 	position = "0x0",
 	scale = 1.0,

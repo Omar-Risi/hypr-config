@@ -20,7 +20,7 @@ require("lua.workspaces_local") -- no pcall, will error loudly if broken
 -- stowed the hypr-desktop or hypr-laptop package on this machine
 -- (see the dotfiles README). pcall() means nothing breaks if they
 -- aren't present -- the universal rules above just keep applying.
-pcall(require, "lua.monitors_local")
+-- pcall(require, "lua.monitors_local") -- enable if you use it
 pcall(require, "lua.workspaces_local")
 pcall(require, "lua.windowrules_local")
 pcall(require, "lua.autostart_local")

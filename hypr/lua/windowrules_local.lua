@@ -9,5 +9,5 @@
 hl.window_rule({
 	name = "steam-big-picture-monitor",
 	match = { class = "steam_app_2050650" },
-	monitor = "desc:Microstep MSI MAG251RX 0x0000011A",
+	monitor = "desc:<monitor desc here>",
 })
