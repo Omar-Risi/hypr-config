@@ -61,3 +61,9 @@ hl.animation({ leaf = "windowsOut", enabled = true, speed = 3, bezier = "smooth"
 hl.animation({ leaf = "border", enabled = true, bezier = "smooth", speed = 6 })
 hl.animation({ leaf = "fade", enabled = true, bezier = "smooth", speed = 4 })
 hl.animation({ leaf = "workspaces", enabled = true, speed = 4, bezier = "snappy", style = "slide" })
+
+-- for rofi (disable if not using rofi)
+hl.layer_rule({
+	match = { namespace = "rofi" },
+	blur = true,
+})
