@@ -1,0 +1,129 @@
+/* ===== Theme colors — change these to re-theme ===== */
+@define-color capsule-bg     rgba(20, 20, 20, 0.55);
+@define-color capsule-border rgba(255, 255, 255, 0.08);
+@define-color fg             #ffffff;
+@define-color fg-dim         #aaaaaa;
+@define-color fg-muted       #666666;
+@define-color fg-active      #ffffff;
+@define-color danger         #ff5555;
+@define-color tooltip-bg     rgba(20, 20, 20, 0.85);
+
+/* ===== General ===== */
+* {
+  font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font Mono", monospace;
+  font-size: 13px;
+  min-height: 0;
+}
+
+window#waybar {
+  min-height: 10px;
+  background-color: transparent;
+  color: @fg;
+}
+
+/* ===== Grouped capsules ===== */
+.modules-left {
+  background-color: @capsule-bg;
+  border: 1px solid @capsule-border;
+  border-radius: 10px;
+  margin: 3px 0 3px 6px;
+}
+.modules-center {
+  background-color: @capsule-bg;
+  border: 1px solid @capsule-border;
+  border-radius: 10px;
+  margin: 3px 0;
+}
+.modules-right {
+  background-color: @capsule-bg;
+  border: 1px solid @capsule-border;
+  border-radius: 10px;
+  margin: 3px 6px 3px 0;
+}
+
+/* ===== Workspaces (sits inside modules-left capsule) ===== */
+#workspaces button {
+  all: initial;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 11px;
+  color: @fg-active;
+  padding: 0 6px;
+  margin: 0 1.5px;
+  min-width: 9px;
+}
+#workspaces button.active {
+  color: @fg-active;
+}
+#workspaces button.empty {
+  opacity: 0.7;
+}
+#workspaces button:hover {
+  background-color: @tooltip-bg;
+}
+
+/* ===== Module spacing ===== */
+#cpu,
+#memory,
+#custom-gpu,
+#clock,
+#pulseaudio,
+#mpris,
+#custom-power,
+#temperature,
+#network,
+#window {
+  padding: 0 10px;
+  margin: 0 2px;
+}
+
+/* ===== Window title ===== */
+#window {
+  color: @fg-dim;
+}
+
+/* ===== Power ===== */
+#custom-power {
+  color: @fg;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+/* ===== MPRIS ===== */
+#mpris {
+  min-width: 0;
+}
+
+/* ===== Clock ===== */
+#clock {
+  font-weight: bold;
+  color: @fg-active;
+}
+
+/* ===== Temperature ===== */
+#temperature.critical {
+  color: @danger;
+}
+
+/* ===== Network / pulseaudio states ===== */
+#network.disconnected {
+  color: @danger;
+}
+#pulseaudio.muted {
+  color: @fg-muted;
+}
+
+/* ===== Tooltip ===== */
+tooltip {
+  background-color: @tooltip-bg;
+  color: @fg;
+  font-weight: bold;
+  border: 1px solid @capsule-border;
+  border-radius: 16px;
+}
+tooltip label {
+  color: @fg;
+  font-size: 11px;
+  padding: 0;
+  margin: 0;
+}
+
