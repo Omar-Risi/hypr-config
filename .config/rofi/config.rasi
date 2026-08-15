@@ -1,0 +1,178 @@
+configuration {
+    modes: "combi";
+    combi-modes: "window,run,drun";
+    drun-display-format: "{name}";
+    icon-theme: "Adwaita";
+    window-format: "{t:45}  ·  {c}";
+    font: "JetbrainsMono Nerd Font";
+    location: 0;
+    fixed-num-lines: true;
+    show-icons: true;
+    sidebar-mode: false;
+    scroll-method: 1;
+    matching: "prefix";
+    sort: true;
+    sorting-method: "normal";
+    click-to-exit: true;
+    combi-hide-mode-prefix: true;
+    display-run: "";
+    display-window: "󰖯";
+    display-drun: "";
+    display-combi: "󰘔";
+    display-ssh: "";
+}
+
+* {
+    bg: #00000060;
+    bg-alt: #00000000;
+    bg-hover: #242832FF;
+    bg-selected: #FFFFFF10;
+    card-bg: #FFFFFF0A;
+    card-bg-hover: #FFFFFF14;
+    fg: #E6EAF2FF;
+    fg-muted: #8B93A7FF;
+    fg-dark: #33fafaa0;
+    accent: #7AA2F7FF;
+    accent-soft: #7AA2F733;
+    urgent: #F7768EFF;
+    border-color: #FFFFFF00;
+    background-color: transparent;
+    text-color: @fg;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+    font-family: "JetbrainsMono Nerd Font";
+}
+
+window {
+    location: center;
+    width: 420px;
+    height: 480px;
+    background-color: @bg;
+    border: 2px;
+    border-color: @border-color;
+    border-radius: 18px;
+    padding: 10;
+}
+
+mainbox {
+    orientation: vertical;
+    background-color: transparent;
+    spacing: 12px;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border: 1px;
+    border-color: @border-color;
+    border-radius: 12px;
+    padding: 5px 15px;
+    spacing: 12px;
+    children: [prompt, entry];
+}
+
+prompt {
+    enabled: true;
+    background-color: transparent;
+    text-color: @accent;
+    padding: 0;
+    vertical-align: 0.5;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg;
+    placeholder: "Search clipboard…";
+    placeholder-color: @fg-muted;
+    padding: 0;
+    vertical-align: 0.5;
+}
+
+/* ===== Clipboard entries as tall cards ===== */
+listview {
+    background-color: transparent;
+    border: 0;
+    spacing: 6px;
+    padding: 4px 0;
+    lines: 6;
+    columns: 1;
+    fixed-height: true;
+    scrollbar: false;
+    cycle: true;
+}
+
+element {
+    background-color: @card-bg;
+    border: 0;
+    border-radius: 12px;
+    padding: 10px 14px;
+    spacing: 0;
+    orientation: horizontal;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+    markup: false;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color: @card-bg;
+    text-color: @fg;
+}
+element normal.active,
+element alternate.active {
+    background-color: @card-bg;
+    text-color: @accent;
+}
+element normal.urgent,
+element alternate.urgent {
+    background-color: @card-bg;
+    text-color: @urgent;
+}
+element selected.normal,
+element selected.active {
+    background-color: @accent-soft;
+    text-color: @fg;
+    border: 1px;
+    border-color: @accent;
+}
+element selected.urgent {
+    background-color: @urgent;
+    text-color: @fg;
+}
+
+message {
+    background-color: transparent;
+    border: 0;
+    padding: 4px 8px;
+    text-color: @fg-muted;
+}
+
+textbox {
+    background-color: transparent;
+    text-color: @fg-muted;
+    horizontal-align: 0.0;
+}
+
+scrollbar {
+    width: 4px;
+    border: 0;
+    handle-color: @accent;
+    handle-width: 4px;
+    padding: 0;
+}
+
+case-indicator {
+    spacing: 0;
+    text-color: @fg-muted;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: "";
+    text-color: inherit;
+}
