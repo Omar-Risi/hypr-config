@@ -93,7 +93,12 @@ hl.bind(
 	mainMod .. " + SHIFT + S",
 	hl.dsp.exec_cmd('grim -g "$(slurp -d)" - | tee ~/Pictures/Screenshots/$(date +%Y%m%d_%H%M%S).png | wl-copy')
 )
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu | cliphist decode | wl-copy"))
+hl.bind(
+	mainMod .. " + V",
+	hl.dsp.exec_cmd(
+		"cliphist list | rofi -dmenu -display-columns 2 -display-column-separator $'\t' | cliphist decode | wl-copy"
+	)
+)
 
 -- Emoji picker
 hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("rofimoji"))
